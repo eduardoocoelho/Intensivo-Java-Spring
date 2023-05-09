@@ -24,7 +24,11 @@ public class Game {
 	private String platforms;
 	private Double score;
 	private String imgUrl;
+	
+	@Column(columnDefinition = "TEXT") //Definir o tipo dda coluna no banco
 	private String shortDescription;
+	
+	@Column(columnDefinition = "TEXT") //Definir o tipo dda coluna no banco
 	private String longDescription;
 	
 	public Game() {
