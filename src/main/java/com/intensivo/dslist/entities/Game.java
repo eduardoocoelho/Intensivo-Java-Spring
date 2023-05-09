@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 public class Game {
 	
 	@Id //Definir a chave primária da tabela
-	@GeneratedValue(strategy = GenerationType.IDENTITY) //Gerar o id no banco
+	@GeneratedValue(strategy = GenerationType.IDENTITY) //Gerar o id automaticamente no banco
 	private Long id;
 	private String title;
 	
@@ -25,10 +25,10 @@ public class Game {
 	private Double score;
 	private String imgUrl;
 	
-	@Column(columnDefinition = "TEXT") //Definir o tipo dda coluna no banco
+	@Column(columnDefinition = "TEXT") //Definir o tipo da coluna na tabela
 	private String shortDescription;
 	
-	@Column(columnDefinition = "TEXT") //Definir o tipo dda coluna no banco
+	@Column(columnDefinition = "TEXT") //Definir o tipo da coluna na tabela
 	private String longDescription;
 	
 	public Game() {
@@ -36,7 +36,6 @@ public class Game {
 
 	public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
 			String shortDescription, String longDescription) {
-		super();
 		this.id = id;
 		this.title = title;
 		this.year = year;
