@@ -11,7 +11,7 @@ import com.intensivo.dslist.dto.GameMinDTO;
 import com.intensivo.dslist.entities.Game;
 import com.intensivo.dslist.repositories.GameRepository;
 
-@Service //Registrar como componente do sistema
+@Service
 public class GameService {
 	
 	@Autowired //Injetar uma instância de GameRepository para chamada
