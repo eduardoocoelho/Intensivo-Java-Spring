@@ -17,10 +17,10 @@ import com.intensivo.dslist.services.GameService;
 @RequestMapping(value = "/lists")
 public class GameListController {
 
-	@Autowired //Injetar uma instância da classe GameService para chamada
+	@Autowired //Injetar uma instância da classe GameListService para chamada
 	private GameListService gameListService;
 	
-	@Autowired 
+	@Autowired //Injetar uma instância da classe GameService para chamada
 	private GameService gameService;
 	
 	@GetMapping //Tipo da requisição (GET)
@@ -30,7 +30,7 @@ public class GameListController {
 	}
 	
 	@GetMapping(value = "/{listId}/games")
-	public List<GameMinDTO> getByList(@PathVariable Long listId){
+	public List<GameMinDTO> getByList(@PathVariable Long listId){ //Retornar os jogos pela lista
 		List<GameMinDTO> result = gameService.getByList(listId);
 		return result; 
 	}
